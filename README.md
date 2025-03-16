@@ -1,6 +1,6 @@
 # Ambient Sound
 
-Ambient Sound is a web application that allows users to mix different ambient sounds to create a personalized sound experience.
+🔈 Ambient Sound is a web application that allows users to mix different ambient sounds to create a personalized sound experience.
 
 ## Features
 
