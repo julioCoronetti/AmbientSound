@@ -1,24 +1,24 @@
 # Ambient Sound
 
-Ambient Sound é uma aplicação web que permite aos usuários mixar diferentes sons ambientes para criar uma experiência sonora personalizada.
+Ambient Sound is a web application that allows users to mix different ambient sounds to create a personalized sound experience.
 
-## Funcionalidades
+## Features
 
-- Mixagem de diferentes sons ambientes como LO-FI, Chuva e Café.
-- Controle de volume individual para cada som.
-- Interface amigável e responsiva.
+- Mixing different ambient sounds such as LOFI, Rain and Coffee Shop.
+- Individual volume control for each sound.
+- User-friendly and responsive interface.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - React
 - TypeScript
 - Tailwind CSS
 - Vite
 
-## Link para o Site
+## Link to Website
 
-[Acesse o site aqui](https://juliocoronetti-ambient-sound.vercel.app)
+[Access the website here](https://juliocoronetti-ambient-sound.vercel.app)
 
-## Licença
+## License
 
-Este projeto está licenciado sob a licença MIT.
+This project is licensed under the MIT License.
