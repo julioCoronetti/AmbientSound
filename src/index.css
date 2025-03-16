@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background: #1D4268;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 8.5rem;
+    background: transparent;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 30px;
+    border-radius: 5px;
+    background: #A3FF8C;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -10px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 30px;
+    border-radius: 5px;
+    background: #A3FF8C;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}

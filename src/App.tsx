@@ -1,5 +1,15 @@
+import { Header } from "./components/Header"
+import { Mixer } from "./components/Mixer/Mixer"
+import "./index.css"
+
+
 const App = () => {
-  return <h1>Ambient Sound</h1>
+  return (
+    <>
+      <Header />
+      <Mixer />
+    </>
+  )
 }
 
-export default App
+export default App;
