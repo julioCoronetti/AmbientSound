@@ -1,10 +1,13 @@
-import { MusicNote, CloudRain, Coffee } from "phosphor-react";
+import { MusicNote, CloudRain, Coffee, PianoKeys, Fire, Sword } from "phosphor-react";
 import { useRef, useState } from "react";
 
 const icons = {
     lofi: MusicNote,
     rain: CloudRain,
     coffee: Coffee,
+    piano: PianoKeys,
+    fire: Fire,
+    sword: Sword,
 };
 
 interface SoundProps {
