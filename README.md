@@ -10,9 +10,9 @@
 
 ## 🛠️ Technologies Used
 
-- React: Used for building the user interface.
-- TypeScript: Ensures a robust and scalable codebase.
-- Tailwind CSS: Simplifies the creation of consistent and responsive styles quickly.
+- **React**: Used for building the user interface.
+- **TypeScript**: Ensures a robust and scalable codebase.
+- **Tailwind CSS**: Simplifies the creation of consistent and responsive styles quickly.
 
 ## 📞 Contact
 - Author: Julio Coronetti
