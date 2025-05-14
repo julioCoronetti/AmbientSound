@@ -4,7 +4,7 @@
 
 ## 🚀 Features
 
-- Mixing different ambient sounds such as LOFI, Rain and Coffee Shop.
+- Mixing different ambient sounds such as LOFI, Rain, Coffee Shop and much more!
 - Individual volume control for each sound.
 - User-friendly and responsive interface.
 
