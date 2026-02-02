@@ -39,15 +39,13 @@ export const Mixer = () => {
 
     return (
         <div className="flex flex-col items-center gap-10 relative">
-            {isAnySoundPlaying && (
-                <button
-                    onClick={handleStopAll}
-                    className="fixed bottom-10 right-10 z-50 px-6 py-3 bg-[#A3FF8C] hover:bg-[#8ee07a] text-black font-bold rounded-full transition-colors text-xl shadow-lg cursor-pointer flex items-center gap-2"
-                >
-                    <XCircle size={32} />
-                    Stop All
-                </button>
-            )}
+            <button
+                onClick={handleStopAll}
+                className={`fixed bottom-10 right-10 z-50 px-6 py-3 bg-[#A3FF8C] hover:bg-[#8ee07a] text-white font-bold rounded-full transition-all duration-300 ease-in-out text-xl shadow-lg cursor-pointer flex items-center gap-2 ${isAnySoundPlaying ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-12 pointer-events-none'}`}
+            >
+                <XCircle size={32} />
+                Stop All
+            </button>
             <main className="w-[80%] grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 justify-items-center mx-auto gap-10">
                 {SOUNDS.map(sound => (
                     <Sound
