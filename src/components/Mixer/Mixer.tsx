@@ -42,7 +42,7 @@ export const Mixer = () => {
             {isAnySoundPlaying && (
                 <button
                     onClick={handleStopAll}
-                    className="fixed bottom-10 right-10 z-50 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-full transition-colors text-xl shadow-lg cursor-pointer flex items-center gap-2"
+                    className="fixed bottom-10 right-10 z-50 px-6 py-3 bg-[#A3FF8C] hover:bg-[#8ee07a] text-black font-bold rounded-full transition-colors text-xl shadow-lg cursor-pointer flex items-center gap-2"
                 >
                     <XCircle size={32} />
                     Stop All
