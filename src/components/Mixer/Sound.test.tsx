@@ -34,6 +34,7 @@ describe('Sound Component', () => {
     it('pauses audio when volume is set to 0 (optimized)', () => {
         const { rerender } = render(
             <Sound
+                id="rain"
                 iconName="rain"
                 audioSrc="test.mp3"
                 title="Rain"
@@ -51,6 +52,7 @@ describe('Sound Component', () => {
         // Update to volume 0
         rerender(
             <Sound
+                id="rain"
                 iconName="rain"
                 audioSrc="test.mp3"
                 title="Rain"
@@ -66,6 +68,7 @@ describe('Sound Component', () => {
     it('plays audio when volume changes from 0 to >0', () => {
         const { rerender } = render(
             <Sound
+                id="rain"
                 iconName="rain"
                 audioSrc="test.mp3"
                 title="Rain"
@@ -85,6 +88,7 @@ describe('Sound Component', () => {
         // Update to volume 0.5
         rerender(
             <Sound
+                id="rain"
                 iconName="rain"
                 audioSrc="test.mp3"
                 title="Rain"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Sound } from "./Sound";
 import { XCircle } from "phosphor-react";
 
@@ -20,12 +20,12 @@ export const Mixer = () => {
         return initialVolumes;
     });
 
-    const handleVolumeChange = (id: string, newVolume: number) => {
+    const handleVolumeChange = useCallback((id: string, newVolume: number) => {
         setVolumes(prev => ({
             ...prev,
             [id]: newVolume
         }));
-    };
+    }, []);
 
     const handleStopAll = () => {
         const newVolumes: Record<string, number> = {};
@@ -52,11 +52,12 @@ export const Mixer = () => {
                 {SOUNDS.map(sound => (
                     <Sound
                         key={sound.id}
+                        id={sound.id}
                         title={sound.title}
                         iconName={sound.iconName}
                         audioSrc={sound.audioSrc}
                         volume={volumes[sound.id]}
-                        onVolumeChange={(newVolume) => handleVolumeChange(sound.id, newVolume)}
+                        onVolumeChange={handleVolumeChange}
                     />
                 ))}
             </main>
