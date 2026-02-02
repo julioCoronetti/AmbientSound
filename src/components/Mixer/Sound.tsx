@@ -24,7 +24,11 @@ export const Sound = ({ iconName, audioSrc, title, volume, onVolumeChange }: Sou
     useEffect(() => {
         if (audioRef.current) {
             audioRef.current.volume = volume;
-            if (volume > 0 && audioRef.current.paused) {
+            if (volume === 0) {
+                if (!audioRef.current.paused) {
+                    audioRef.current.pause();
+                }
+            } else if (audioRef.current.paused) {
                 audioRef.current.play();
             }
         }
