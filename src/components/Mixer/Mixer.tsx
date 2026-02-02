@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Sound } from "./Sound";
+import { XCircle } from "phosphor-react";
 
 const SOUNDS = [
     { id: 'lofi', title: 'LO-FI', iconName: 'lofi', audioSrc: '/assets/sounds/lofi.mp3' },
@@ -34,14 +35,19 @@ export const Mixer = () => {
         setVolumes(newVolumes);
     };
 
+    const isAnySoundPlaying = Object.values(volumes).some(volume => volume > 0);
+
     return (
-        <div className="flex flex-col items-center gap-10">
-            <button
-                onClick={handleStopAll}
-                className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-full transition-colors text-xl shadow-lg cursor-pointer"
-            >
-                Stop All
-            </button>
+        <div className="flex flex-col items-center gap-10 relative">
+            {isAnySoundPlaying && (
+                <button
+                    onClick={handleStopAll}
+                    className="fixed bottom-10 right-10 z-50 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-full transition-colors text-xl shadow-lg cursor-pointer flex items-center gap-2"
+                >
+                    <XCircle size={32} />
+                    Stop All
+                </button>
+            )}
             <main className="w-[80%] grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 justify-items-center mx-auto gap-10">
                 {SOUNDS.map(sound => (
                     <Sound
