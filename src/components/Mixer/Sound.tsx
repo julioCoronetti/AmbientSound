@@ -1,5 +1,5 @@
 import { MusicNote, CloudRain, Coffee, PianoKeys, Fire, Sword } from "phosphor-react";
-import { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 
 const icons = {
     lofi: MusicNote,
@@ -14,21 +14,25 @@ interface SoundProps {
     iconName: keyof typeof icons;
     audioSrc: string;
     title: string;
+    volume: number;
+    onVolumeChange: (volume: number) => void;
 }
 
-export const Sound = ({ iconName, audioSrc, title }: SoundProps) => {
+export const Sound = ({ iconName, audioSrc, title, volume, onVolumeChange }: SoundProps) => {
     const audioRef = useRef<HTMLAudioElement>(null);
-    const [volume, setVolume] = useState(0.0);
 
-    const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const newVolume = parseFloat(event.target.value);
-        setVolume(newVolume);
+    useEffect(() => {
         if (audioRef.current) {
-            audioRef.current.volume = newVolume;
-            if (newVolume > 0 && audioRef.current.paused) {
+            audioRef.current.volume = volume;
+            if (volume > 0 && audioRef.current.paused) {
                 audioRef.current.play();
             }
         }
+    }, [volume]);
+
+    const handleVolumeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const newVolume = parseFloat(event.target.value);
+        onVolumeChange(newVolume);
     };
 
     const IconComponent = icons[iconName];
