@@ -1,18 +1,9 @@
-import { MusicNote, CloudRain, Coffee, PianoKeys, Fire, Sword } from "phosphor-react";
 import { useRef, useEffect, memo } from "react";
-
-const icons = {
-    lofi: MusicNote,
-    rain: CloudRain,
-    coffee: Coffee,
-    piano: PianoKeys,
-    fire: Fire,
-    sword: Sword,
-};
+import { iconMap, IconName } from "./iconMap";
 
 interface SoundProps {
     id: string;
-    iconName: keyof typeof icons;
+    iconName: IconName;
     audioSrc: string;
     title: string;
     volume: number;
@@ -36,7 +27,7 @@ export const Sound = memo(({ id, iconName, audioSrc, title, volume, onVolumeChan
         onVolumeChange(id, newVolume);
     };
 
-    const IconComponent = icons[iconName];
+    const IconComponent = iconMap[iconName];
 
     return (
         <div className="flex flex-col gap-2 items-center">
